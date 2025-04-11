@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Молодіжний форум "Твою думку хочуть почути" 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        festival: {
+                            purple: '#8A2BE2',
+                            pink: '#FF1493',
+                            yellow: '#FFD700',
+                            blue: '#1E90FF',
+                            green: '#32CD32'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .festival-gradient {
+            background: linear-gradient(90deg, #8A2BE2, #FF1493, #FFD700);
+        }
+        .schedule-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-img {
+            transition: all 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-festival-purple">
+                    <span class="bg-clip-text text-transparent festival-gradient">ФОРУМ "ТВОЮ ДУМКУ ХОЧУТЬ ПОЧУТИ" 2025</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="font-medium hover:text-festival-pink transition">Про форум</a>
+                    <a href="#schedule" class="font-medium hover:text-festival-pink transition">Розклад</a>
+                    <a href="#gallery" class="font-medium hover:text-festival-pink transition">Галерея</a>
+                    <a href="#register" class="font-medium hover:text-festival-pink transition">Реєстрація</a>
+                </div>
+                
+                <button class="md:hidden focus:outline-none" id="menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="#about" class="font-medium hover:text-festival-pink transition">Про форум</a>
+                    <a href="#schedule" class="font-medium hover:text-festival-pink transition">Розклад</a>
+                    <a href="#gallery" class="font-medium hover:text-festival-pink transition">Галерея</a>
+                    <a href="#register" class="font-medium hover:text-festival-pink transition">Реєстрація</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 md:pt-32 md:pb-24 festival-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">МОЛОДІЖНИЙ ФОРУМ "ТВОЮ ДУМКУ ХОЧУТЬ ПОЧУТИ" 2025</h1>
+            <p class="text-xl md:text-2xl mb-8">Приєднуйтесь до найбільшої молодіжної події року!</p>
+            <p class="text-lg mb-8">15-18 липня 2025 • Центральний парк міста</p>
+            <a href="#register" class="bg-white text-festival-purple font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 inline-block">Зареєструватися зараз</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Про форум</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-festival-purple">Святкування молодіжної культури</h3>
+                    <p class="text-gray-700 mb-4">Молодіжний форум "Твою думку хочуть почути" 2025 об'єднує молодь з усієї країни на чотири дні музики, мистецтва, майстер-класів, спорту та незабутніх вражень.</p>
+                    <p class="text-gray-700 mb-4">Тема цього року — "Створи своє майбутнє", заохочує учасників досліджувати свій потенціал та спілкуватися з однодумцями у яскравому, інклюзивному середовищі.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-festival-yellow bg-opacity-20 p-4 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-festival-yellow">4</span>
+                            <span class="text-gray-700">Дні</span>
+                        </div>
+                        <div class="bg-festival-pink bg-opacity-20 p-4 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-festival-pink">50+</span>
+                            <span class="text-gray-700">Активностей</span>
+                        </div>
+                        <div class="bg-festival-blue bg-opacity-20 p-4 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-festival-blue">30+</span>
+                            <span class="text-gray-700">Спікерів</span>
+                        </div>
+                        <div class="bg-festival-green bg-opacity-20 p-4 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-festival-green">5000+</span>
+                            <span class="text-gray-700">Учасників</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=2070" alt="Натовп на форумі" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Розклад подій</h2>
+            
+            <!-- Schedule Tabs -->
+            <div class="mb-8 flex flex-wrap justify-center gap-2">
+                <button class="schedule-tab bg-festival-purple text-white px-6 py-2 rounded-full font-medium" data-day="day1">День 1</button>
+                <button class="schedule-tab bg-white text-gray-700 px-6 py-2 rounded-full font-medium" data-day="day2">День 2</button>
+                <button class="schedule-tab bg-white text-gray-700 px-6 py-2 rounded-full font-medium" data-day="day3">День 3</button>
+                <button class="schedule-tab bg-white text-gray-700 px-6 py-2 rounded-full font-medium" data-day="day4">День 4</button>
+            </div>
+            
+            <!-- Day 1 Schedule -->
+            <div class="schedule-content" id="day1">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-purple text-white text-sm font-semibold px-3 py-1 rounded-full">9:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Головна сцена</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Церемонія відкриття</h3>
+                        <p class="text-gray-600">Приєднуйтесь до урочистого відкриття з особливими виступами та ключовими доповідачами.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-blue text-white text-sm font-semibold px-3 py-1 rounded-full">11:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Зона майстер-класів</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Майстер-клас з креативного письма</h3>
+                        <p class="text-gray-600">Відкрийте свій голос та розвивайте навички розповіді історій з опублікованими авторами.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-pink text-white text-sm font-semibold px-3 py-1 rounded-full">13:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Фуд-корт</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Міжнародний фестиваль їжі</h3>
+                        <p class="text-gray-600">Скуштуйте кухні з усього світу, приготовані талановитими молодими шеф-кухарями.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-green text-white text-sm font-semibold px-3 py-1 rounded-full">15:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Технологічний хаб</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Змагання з програмування</h3>
+                        <p class="text-gray-600">Перевірте свої навички програмування в цьому дружньому змаганні.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-yellow text-white text-sm font-semibold px-3 py-1 rounded-full">17:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Арт-галерея</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Виставка молодіжного мистецтва</h3>
+                        <p class="text-gray-600">Дослідіть вражаючі твори мистецтва, створені талановитими молодими художниками з усієї країни.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-purple text-white text-sm font-semibold px-3 py-1 rounded-full">20:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Головна сцена</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Концерт: Молоді таланти</h3>
+                        <p class="text-gray-600">Завершіть день електризуючими виступами молодих музичних талантів.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 Schedule (Hidden by default) -->
+            <div class="schedule-content hidden" id="day2">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-blue text-white text-sm font-semibold px-3 py-1 rounded-full">9:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Спортивна арена</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Початок спортивного турніру</h3>
+                        <p class="text-gray-600">Сьогодні починаються турніри з баскетболу, волейболу та футболу.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-pink text-white text-sm font-semibold px-3 py-1 rounded-full">11:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Інноваційна лабораторія</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Конкурс стартап-проєктів</h3>
+                        <p class="text-gray-600">Молоді підприємці представляють свої інноваційні бізнес-ідеї експертному журі.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-yellow text-white text-sm font-semibold px-3 py-1 rounded-full">14:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Зона майстер-класів</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Майстер-клас з цифрової фотографії</h3>
+                        <p class="text-gray-600">Вивчіть професійні техніки фотографії від фотографів-лауреатів премій.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-green text-white text-sm font-semibold px-3 py-1 rounded-full">16:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Еко-зона</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Панельна дискусія про кліматичні дії</h3>
+                        <p class="text-gray-600">Приєднуйтесь до молодих кліматичних активістів для надихаючої дискусії про екологічні проблеми.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-purple text-white text-sm font-semibold px-3 py-1 rounded-full">18:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Танцювальна студія</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Танцювальний батл</h3>
+                        <p class="text-gray-600">Станьте свідком неймовірних танцювальних виступів і проголосуйте за свою улюблену команду.</p>
+                    </div>
+                    
+                    <div class="schedule-item bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-festival-blue text-white text-sm font-semibold px-3 py-1 rounded-full">20:00</span>
+                            <span class="ml-2 text-sm text-gray-500">Головна сцена</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Міжнародна ніч діджеїв</h3>
+                        <p class="text-gray-600">Танцюйте всю ніч під музику найкращих діджеїв, які грають найновіші хіти.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 & 4 Schedules would be similar, hidden by default -->
+            <div class="schedule-content hidden" id="day3">
+                <!-- Similar structure to day1 and day2 -->
+                <p class="text-center text-gray-600">Розклад третього дня буде оприлюднено незабаром!</p>
+            </div>
+            
+            <div class="schedule-content hidden" id="day4">
+                <!-- Similar structure to day1 and day2 -->
+                <p class="text-center text-gray-600">Розклад четвертого дня буде оприлюднено незабаром!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Галерея форуму</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Згадайте моменти з наших попередніх форумів. Ось невеликий огляд того, що ви можете очікувати на Молодіжному форумі "Твою думку хочуть почути" 2025!</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://www.goodfreephotos.com/albums/australia/south-australia/adelaide/concert-venue-of-womadelaide-in-adelaide-southern-australia.jpg" alt="Концерт на форумі" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Концерт на головній сцені</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2024</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=2074" alt="Творчі майстер-класи" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Творчі майстер-класи</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2024</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&q=80&w=2070" alt="Виставка мистецтва" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Виставка мистецтва</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2023</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1504680177321-2e6a879aac86?auto=format&fit=crop&q=80&w=2070" alt="Технологічна виставка" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Виставка інновацій</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2023</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=2069" alt="Спортивні змагання" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Спортивний турнір</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2022</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=2070" alt="Танцювальний виступ" class="w-full h-64 object-cover gallery-img">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Танцювальний конкурс</h3>
+                        <p class="text-gray-600 text-sm">Молодіжний форум 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Зареєструйтеся зараз</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Забезпечте своє місце на Молодіжному форумі "Твою думку хочуть почути" 2025. Рання реєстрація закривається 31 березня 2025 року.</p>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 festival-gradient p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Інформація про реєстрацію</h3>
+                        <div class="mb-6">
+                            <p class="font-semibold mb-1">Дати</p>
+                            <p>15-18 липня 2025</p>
+                        </div>
+                        <div class="mb-6">
+                            <p class="font-semibold mb-1">Місце</p>
+                            <p>Центральний парк міста</p>
+                        </div>
+                        <div class="mb-6">
+                            <p class="font-semibold mb-1">Вартість</p>
+                            <p>750 грн (Рання реєстрація)</p>
+                            <p>950 грн (Звичайна)</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Включає</p>
+                            <ul class="list-disc pl-5">
+                                <li>Усі майстер-класи</li>
+                                <li>Доступ до концертів</li>
+                                <li>Футболка форуму</li>
+                                <li>Ваучери на харчування</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3 p-8">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">Ім'я</label>
+                                    <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                                </div>
+                                
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Прізвище</label>
+                                    <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Електронна пошта</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Номер телефону</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                            </div>
+                            
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Вік</label>
+                                <input type="number" id="age" name="age" min="16" max="30" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                                <p class="text-xs text-gray-500 mt-1">Учасники повинні бути віком від 16 до 30 років</p>
+                            </div>
+                            
+                            <div>
+                                <label for="interests" class="block text-sm font-medium text-gray-700 mb-1">Сфери інтересів (виберіть усі, що підходять)</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex items-center">
+                                
+                                        <input type="checkbox" id="music" name="interests[]" value="music" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="music" class="ml-2 text-sm text-gray-700">Музика</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="art" name="interests[]" value="art" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="art" class="ml-2 text-sm text-gray-700">Мистецтво</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="technology" name="interests[]" value="technology" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="technology" class="ml-2 text-sm text-gray-700">Технології</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="sports" name="interests[]" value="sports" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="sports" class="ml-2 text-sm text-gray-700">Спорт</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="entrepreneurship" name="interests[]" value="entrepreneurship" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="entrepreneurship" class="ml-2 text-sm text-gray-700">Підприємництво</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="environment" name="interests[]" value="environment" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                        <label for="environment" class="ml-2 text-sm text-gray-700">Екологія</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="ticketType" class="block text-sm font-medium text-gray-700 mb-1">Тип квитка</label>
+                                <select id="ticketType" name="ticketType" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple">
+                                    <option value="">Виберіть тип квитка</option>
+                                    <option value="earlyBird">Рання реєстрація (750 грн)</option>
+                                    <option value="regular">Звичайний (950 грн)</option>
+                                    <option value="group">Група від 5 осіб (650 грн за особу)</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="accommodation" class="block text-sm font-medium text-gray-700 mb-1">Потрібне проживання?</label>
+                                <div class="flex items-center space-x-6">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="accomYes" name="accommodation" value="yes" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300">
+                                        <label for="accomYes" class="ml-2 text-sm text-gray-700">Так</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" id="accomNo" name="accommodation" value="no" class="h-4 w-4 text-festival-purple focus:ring-festival-purple border-gray-300">
+                                        <label for="accomNo" class="ml-2 text-sm text-gray-700">Ні</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">За проживання стягується додаткова плата</p>
+                            </div>
+                            
+                            <div>
+                                <label for="specialRequirements" class="block text-sm font-medium text-gray-700 mb-1">Особливі вимоги або потреби доступності</label>
+                                <textarea id="specialRequirements" name="specialRequirements" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-festival-purple focus:border-festival-purple"></textarea>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="terms" name="terms" required class="h-4 w-4 mt-1 text-festival-purple focus:ring-festival-purple border-gray-300 rounded">
+                                <label for="terms" class="ml-2 text-sm text-gray-700">Я погоджуюсь з <a href="#" class="text-festival-purple hover:underline">Умовами та положеннями</a> та <a href="#" class="text-festival-purple hover:underline">Політикою конфіденційності</a></label>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-3 px-4 bg-festival-purple text-white font-bold rounded-lg hover:bg-opacity-90 transition duration-300">Завершити реєстрацію</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Молодіжний форум "Твою думку хочуть почути" 2025</h3>
+                    <p class="text-gray-400">Найбільше святкування молодіжної культури, творчості та інновацій.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-white hover:text-festival-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-festival-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-festival-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-festival-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Швидкі посилання</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Про форум</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white transition">Розклад</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Галерея</a></li>
+                        <li><a href="#register" class="text-gray-400 hover:text-white transition">Реєстрація</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Часті запитання</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакти</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="text-gray-400">вул. Фестивальна 123, Центр міста</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-400">info@tvoyudumku2025.ua</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span class="text-gray-400">+380 44 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Розсилка</h3>
+                    <p class="text-gray-400 mb-4">Підпишіться, щоб отримувати оновлення про форум та ранній доступ до продажу квитків.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Ваш email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none focus:ring-2 focus:ring-festival-purple">
+                        <button type="submit" class="bg-festival-purple px-4 py-2 rounded-r-lg text-white font-medium hover:bg-opacity-90 transition">Підписатися</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Молодіжний форум "Твою думку хочуть почути". Усі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Schedule tabs
+        const scheduleTabs = document.querySelectorAll('.schedule-tab');
+        const scheduleContents = document.querySelectorAll('.schedule-content');
+        
+        scheduleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Reset all tabs
+                scheduleTabs.forEach(t => {
+                    t.classList.remove('bg-festival-purple', 'text-white');
+                    t.classList.add('bg-white', 'text-gray-700');
+                });
+                
+                // Highlight active tab
+                tab.classList.remove('bg-white', 'text-gray-700');
+                tab.classList.add('bg-festival-purple', 'text-white');
+                
+                // Hide all content
+                scheduleContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show selected content
+                const day = tab.getAttribute('data-day');
+                document.getElementById(day).classList.remove('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
